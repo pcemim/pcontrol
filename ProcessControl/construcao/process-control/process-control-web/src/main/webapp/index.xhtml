@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Process Control</title>
+        </h:head>
+        <h:body >
+            <h1>Process Controll</h1>
+            <h:form>
+                <h:inputText id="campo_sistema" title="Sistema" value="#{consultaMB.sistema}" />
+                <h:inputText id="campo_item" title="Item" value="#{consultaMB.item}" />
+                <h:inputText id="campo_branch" title="Projeto" value="#{consultaMB.projeto}" />
+                <h:inputText id="campo_branch" title="Branch" value="#{consultaMB.branch}" />
+                <p:commandButton id="btn_consulta" value="Consultar" update="resultado" action="#{consultaMB.consultar()}"/>
+                <p:dataTable id="resultado" var="item" value="#{consultaMB.resultado}">
+                    <p:column headerText="AF">
+                        <h:outputText value="#{item.af}" />
+                    </p:column>
+                    <p:column headerText="AS">
+                        <h:outputText value="#{item.as}" />
+                    </p:column>
+                    <p:column headerText="PR">
+                        <h:outputText value="#{item.pr}" />
+                    </p:column>
+                    <p:column headerText="TST">
+                        <h:outputText value="#{item.tst}" />
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
