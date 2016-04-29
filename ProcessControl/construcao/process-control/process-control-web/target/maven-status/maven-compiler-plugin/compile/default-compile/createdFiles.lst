@@ -1,0 +1,3 @@
+process\control\web\vo\RetornoConsultaVO.class
+process\control\web\service\ConsultaService.class
+process\control\web\mb\ConsultaMB.class

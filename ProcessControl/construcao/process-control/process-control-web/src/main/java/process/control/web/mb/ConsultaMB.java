@@ -33,13 +33,6 @@ public class ConsultaMB {
     @PostConstruct
     public void init() {
         consultaService = new ConsultaService();
-        //resourceBundle = ResourceBundle.getBundle("br.org.fundaplub.web.contexto.mensagem_pt");
-//        usuarioVo = new UsuarioVo();
-//        if (sessaoUsuarioBean.getUsuarioLogado() != null) {
-//            FacesContext.getCurrentInstance().getExternalContext()
-//                    .redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
-//                            + ConstantUtils.URL_HOME);
-//        }
     }
     
     
